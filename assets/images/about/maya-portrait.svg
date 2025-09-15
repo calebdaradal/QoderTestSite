@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Background -->
+  <defs>
+    <radialGradient id="portraitBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0522D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#portraitBg)" stroke="#D4AF37" stroke-width="4"/>
+  
+  <!-- Portrait silhouette -->
+  <g transform="translate(200,200)">
+    <!-- Hair -->
+    <path d="M-50,-80 Q-60,-100 -40,-110 Q0,-120 40,-110 Q60,-100 50,-80 Q50,-60 45,-40 Q-45,-40 -50,-60 Z" 
+          fill="url(#hair)"/>
+    
+    <!-- Face shape -->
+    <ellipse cx="0" cy="-20" rx="40" ry="55" fill="#FBBF94"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="-12" cy="-35" rx="3" ry="2" fill="#2D3748"/>
+    <ellipse cx="12" cy="-35" rx="3" ry="2" fill="#2D3748"/>
+    
+    <!-- Eyebrows -->
+    <path d="M-18,-42 Q-12,-44 -6,-42" stroke="#8B4513" stroke-width="1" fill="none"/>
+    <path d="M6,-42 Q12,-44 18,-42" stroke="#8B4513" stroke-width="1" fill="none"/>
+    
+    <!-- Nose -->
+    <path d="M0,-25 Q2,-20 0,-15" stroke="#E2AD84" stroke-width="1" fill="none"/>
+    
+    <!-- Lips -->
+    <ellipse cx="0" cy="-5" rx="4" ry="2" fill="#CD6B7D"/>
+    
+    <!-- Neck -->
+    <rect x="-12" y="35" width="24" height="20" fill="#FBBF94"/>
+    
+    <!-- Clothing suggestion -->
+    <rect x="-35" y="55" width="70" height="40" fill="#4C51BF" rx="8"/>
+    
+    <!-- Artistic touches -->
+    <circle cx="-60" cy="-60" r="3" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="65" cy="-40" r="2" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="-55" cy="40" r="2.5" fill="#D4AF37" opacity="0.6"/>
+  </g>
+  
+  <!-- Decorative border -->
+  <circle cx="200" cy="200" r="185" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+</svg>

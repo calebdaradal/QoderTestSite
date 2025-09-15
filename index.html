@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Artist Portfolio - Showcasing creative digital art, illustrations, and commissioned artwork">
+    <meta name="keywords" content="digital art, illustration, portfolio, artist, commission">
+    <title>Maya Chen - Digital Artist Portfolio</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="navbar__container">
+                <div class="navbar__brand">
+                    <a href="#home" class="brand-link" aria-label="Maya Chen Digital Artist - Home">
+                        <span class="brand-text">Maya Chen</span>
+                    </a>
+                </div>
+                
+                <ul class="navbar__menu" role="menubar">
+                    <li class="navbar__item" role="none">
+                        <a href="#home" class="navbar__link navbar__link--active" role="menuitem" aria-current="page">Home</a>
+                    </li>
+                    <li class="navbar__item" role="none">
+                        <a href="#gallery" class="navbar__link" role="menuitem">Gallery</a>
+                    </li>
+                    <li class="navbar__item" role="none">
+                        <a href="#collections" class="navbar__link" role="menuitem">Collections</a>
+                    </li>
+                    <li class="navbar__item" role="none">
+                        <a href="#about" class="navbar__link" role="menuitem">About</a>
+                    </li>
+                    <li class="navbar__item" role="none">
+                        <a href="#contact" class="navbar__link" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile menu toggle -->
+                <button class="navbar__toggle" aria-label="Toggle mobile menu" aria-expanded="false" data-menu-toggle>
+                    <span class="navbar__toggle-line"></span>
+                    <span class="navbar__toggle-line"></span>
+                    <span class="navbar__toggle-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="main" role="main">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="banner" aria-label="Artist introduction">
+            <div class="hero__background">
+                <div class="hero__image" role="img" aria-label="Featured digital artwork background"></div>
+            </div>
+            <div class="hero__content">
+                <div class="hero__container">
+                    <h1 class="hero__title">Maya Chen</h1>
+                    <p class="hero__subtitle">Digital Artist & Illustrator</p>
+                    <p class="hero__description">Creating immersive digital worlds through concept art, character design, and environmental illustrations</p>
+                    <a href="#gallery" class="hero__cta btn btn--primary" aria-label="View my artwork gallery">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero__scroll-indicator" aria-label="Scroll down to see more">
+                <div class="scroll-indicator">
+                    <span class="scroll-indicator__text">Scroll</span>
+                    <div class="scroll-indicator__line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery" role="region" aria-label="Artwork gallery">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Gallery</h2>
+                    <p class="section-subtitle">Explore my latest digital artworks and illustrations</p>
+                </header>
+                
+                <!-- Gallery Filters -->
+                <div class="gallery__filters" role="tablist" aria-label="Filter artwork by category">
+                    <button class="filter-btn filter-btn--active" data-filter="all" role="tab" aria-selected="true" aria-controls="gallery-grid">All</button>
+                    <button class="filter-btn" data-filter="illustration" role="tab" aria-selected="false" aria-controls="gallery-grid">Illustrations</button>
+                    <button class="filter-btn" data-filter="concept-art" role="tab" aria-selected="false" aria-controls="gallery-grid">Concept Art</button>
+                    <button class="filter-btn" data-filter="character-design" role="tab" aria-selected="false" aria-controls="gallery-grid">Character Design</button>
+                    <button class="filter-btn" data-filter="environment" role="tab" aria-selected="false" aria-controls="gallery-grid">Environment</button>
+                </div>
+                
+                <!-- Gallery Grid -->
+                <div id="gallery-grid" class="gallery__grid" role="tabpanel" aria-label="Artwork grid">
+                    <!-- Artwork items will be dynamically populated -->
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="gallery__load-more">
+                    <button class="btn btn--secondary" id="load-more-btn" aria-label="Load more artwork">
+                        Load More Artwork
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collections Section -->
+        <section id="collections" class="collections" role="region" aria-label="Artwork collections">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Collections</h2>
+                    <p class="section-subtitle">Curated series and themed artwork projects</p>
+                </header>
+                
+                <div class="collections__grid">
+                    <article class="collection-card" tabindex="0" role="button" aria-label="View Fantasy Illustrations collection">
+                        <img class="collection-card__image" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center" alt="Fantasy Illustrations collection cover" loading="lazy" />
+                        <div class="collection-card__content">
+                            <h3 class="collection-card__title">Fantasy Illustrations</h3>
+                            <p class="collection-card__description">Epic fantasy scenes featuring magical creatures, mystical landscapes, and heroic characters in vibrant digital paintings.</p>
+                            <div class="collection-card__meta">
+                                <span class="collection-card__count">12 artworks</span>
+                                <span class="collection-card__year">2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="collection-card" tabindex="0" role="button" aria-label="View Sci-Fi Concepts collection">
+                        <img class="collection-card__image" src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop&crop=center" alt="Sci-Fi Concepts collection cover" loading="lazy" />
+                        <div class="collection-card__content">
+                            <h3 class="collection-card__title">Sci-Fi Concepts</h3>
+                            <p class="collection-card__description">Futuristic technology, alien worlds, and cyberpunk cityscapes exploring themes of advanced civilization.</p>
+                            <div class="collection-card__meta">
+                                <span class="collection-card__count">8 artworks</span>
+                                <span class="collection-card__year">2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="collection-card" tabindex="0" role="button" aria-label="View Character Designs collection">
+                        <img class="collection-card__image" src="https://images.unsplash.com/photo-1551550029-12c7dd043ba8?w=400&h=300&fit=crop&crop=center" alt="Character Designs collection cover" loading="lazy" />
+                        <div class="collection-card__content">
+                            <h3 class="collection-card__title">Character Designs</h3>
+                            <p class="collection-card__description">Original character concepts for games, books, and personal projects showcasing diverse personalities and styles.</p>
+                            <div class="collection-card__meta">
+                                <span class="collection-card__count">15 artworks</span>
+                                <span class="collection-card__year">2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" role="region" aria-label="About the artist">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face" alt="Maya Chen, Digital Artist" class="about__photo">
+                    </div>
+                    <div class="about__text">
+                        <header class="section-header">
+                            <h2 class="section-title">About Maya</h2>
+                        </header>
+                        
+                        <div class="about__bio">
+                            <p>With over 8 years of experience in digital art and illustration, I specialize in creating captivating fantasy worlds, memorable characters, and atmospheric environments. My work spans from concept art for indie games to book cover illustrations and personal artistic projects.</p>
+                            
+                            <p>I'm passionate about storytelling through visual art, combining traditional artistic principles with cutting-edge digital techniques to bring imagination to life. Every piece I create aims to transport viewers into new worlds and evoke deep emotional connections.</p>
+                        </div>
+                        
+                        <div class="about__skills">
+                            <h3 class="about__skills-title">Skills & Expertise</h3>
+                            <ul class="skills-list">
+                                <li class="skill-item">Digital Painting</li>
+                                <li class="skill-item">Concept Art</li>
+                                <li class="skill-item">Character Design</li>
+                                <li class="skill-item">Environment Art</li>
+                                <li class="skill-item">Illustration</li>
+                                <li class="skill-item">Book Cover Design</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="about__software">
+                            <h3 class="about__software-title">Software</h3>
+                            <ul class="software-list">
+                                <li class="software-item">Adobe Photoshop</li>
+                                <li class="software-item">Procreate</li>
+                                <li class="software-item">Clip Studio Paint</li>
+                                <li class="software-item">Blender</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="about__social">
+                            <h3 class="about__social-title">Follow My Work</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/mayachen_art" class="social-link" aria-label="Follow on Instagram" target="_blank" rel="noopener">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://artstation.com/mayachen" class="social-link" aria-label="View portfolio on ArtStation" target="_blank" rel="noopener">
+                                    <i class="fab fa-artstation" aria-hidden="true"></i>
+                                    <span>ArtStation</span>
+                                </a>
+                                <a href="https://twitter.com/mayachen_art" class="social-link" aria-label="Follow on Twitter" target="_blank" rel="noopener">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="https://behance.net/mayachen" class="social-link" aria-label="View projects on Behance" target="_blank" rel="noopener">
+                                    <i class="fab fa-behance" aria-hidden="true"></i>
+                                    <span>Behance</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" role="region" aria-label="Contact information and commission form">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Ready to bring your vision to life? Let's collaborate!</p>
+                </header>
+                
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <h3 class="contact__card-title">
+                                <i class="fas fa-palette" aria-hidden="true"></i>
+                                Commission Information
+                            </h3>
+                            <div class="contact__card-content">
+                                <p><strong>Status:</strong> <span class="status-open">Open for Commissions</span></p>
+                                <p><strong>Response Time:</strong> 24-48 hours</p>
+                                <p><strong>Turnaround:</strong> 2-4 weeks depending on complexity</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__card">
+                            <h3 class="contact__card-title">
+                                <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                                Pricing Guide
+                            </h3>
+                            <div class="contact__card-content">
+                                <ul class="pricing-list">
+                                    <li><strong>Character Design:</strong> $300-800</li>
+                                    <li><strong>Illustration:</strong> $500-2000</li>
+                                    <li><strong>Concept Art:</strong> $400-1200</li>
+                                    <li><strong>Book Cover:</strong> $1000-3000</li>
+                                </ul>
+                                <p class="pricing-note">*Prices vary based on complexity, usage rights, and timeline</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__card">
+                            <h3 class="contact__card-title">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                Contact Details
+                            </h3>
+                            <div class="contact__card-content">
+                                <p><strong>Email:</strong> <a href="mailto:commissions@mayachen.art">commissions@mayachen.art</a></p>
+                                <p><strong>Business Inquiries:</strong> <a href="mailto:business@mayachen.art">business@mayachen.art</a></p>
+                                <div class="contact__social">
+                                    <a href="https://instagram.com/mayachen_art" class="contact__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://artstation.com/mayachen" class="contact__social-link" aria-label="ArtStation" target="_blank" rel="noopener">
+                                        <i class="fab fa-artstation" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://twitter.com/mayachen_art" class="contact__social-link" aria-label="Twitter" target="_blank" rel="noopener">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__form-container">
+                        <form class="contact__form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" required aria-describedby="name-error">
+                                <div class="form-error" id="name-error" role="alert"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
+                                <div class="form-error" id="email-error" role="alert"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="project-type" class="form-label">Project Type *</label>
+                                <select id="project-type" name="project-type" class="form-select" required aria-describedby="project-type-error">
+                                    <option value="">Select a project type</option>
+                                    <option value="character-design">Character Design</option>
+                                    <option value="illustration">Illustration</option>
+                                    <option value="concept-art">Concept Art</option>
+                                    <option value="book-cover">Book Cover</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="form-error" id="project-type-error" role="alert"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget" class="form-label">Budget Range</label>
+                                <select id="budget" name="budget" class="form-select">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-500">Under $500</option>
+                                    <option value="500-1000">$500 - $1,000</option>
+                                    <option value="1000-2000">$1,000 - $2,000</option>
+                                    <option value="2000-plus">$2,000+</option>
+                                    <option value="discuss">Let's discuss</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline" class="form-label">Timeline</label>
+                                <select id="timeline" name="timeline" class="form-select">
+                                    <option value="">Select timeline</option>
+                                    <option value="flexible">Flexible</option>
+                                    <option value="1-2-weeks">1-2 weeks</option>
+                                    <option value="3-4-weeks">3-4 weeks</option>
+                                    <option value="1-2-months">1-2 months</option>
+                                    <option value="3-months-plus">3+ months</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Project Description *</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Please describe your project, including any specific requirements, style preferences, and reference materials..." aria-describedby="message-error"></textarea>
+                                <div class="form-error" id="message-error" role="alert"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary form-submit" aria-describedby="form-status">
+                                <span class="btn-text">Send Message</span>
+                                <i class="fas fa-paper-plane btn-icon" aria-hidden="true"></i>
+                            </button>
+                            
+                            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>&copy; 2024 Maya Chen. All rights reserved.</p>
+                    <p>Digital Artist & Illustrator</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#privacy" class="footer__link">Privacy Policy</a>
+                    <a href="#terms" class="footer__link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Lightbox -->
+    <div class="modal" id="lightbox-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close></div>
+        <div class="modal__container">
+            <div class="modal__header">
+                <h3 class="modal__title" id="modal-title">Artwork Title</h3>
+                <button class="modal__close" data-modal-close aria-label="Close modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal__body">
+                <div class="modal__image-container">
+                    <img class="modal__image" id="modal-image" src="" alt="">
+                    <div class="modal__nav">
+                        <button class="modal__nav-btn modal__nav-btn--prev" id="modal-prev" aria-label="Previous image">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="modal__nav-btn modal__nav-btn--next" id="modal-next" aria-label="Next image">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal__details">
+                    <div class="modal__info">
+                        <p class="modal__category" id="modal-category"></p>
+                        <p class="modal__year" id="modal-year"></p>
+                        <p class="modal__medium" id="modal-medium"></p>
+                        <p class="modal__dimensions" id="modal-dimensions"></p>
+                    </div>
+                    <p class="modal__description" id="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/image-loader.js"></script>
+    <script>
+    // Portfolio Gallery Data
+    const artworkData = [
+        {
+            id: 'artwork-001',
+            title: 'Mystical Forest',
+            category: 'illustration',
+            thumbnail: 'assets/images/gallery/jpg/artwork-001.svg',
+            fullSize: 'assets/images/gallery/jpg/artwork-001.svg',
+            alt: 'Digital illustration of mystical forest scene',
+            year: 2024,
+            medium: 'Digital Painting'
+        },
+        {
+            id: 'artwork-002',
+            title: 'Cyberpunk City',
+            category: 'concept-art',
+            thumbnail: 'assets/images/gallery/jpg/artwork-002.svg',
+            fullSize: 'assets/images/gallery/jpg/artwork-002.svg',
+            alt: 'Futuristic cyberpunk cityscape',
+            year: 2024,
+            medium: 'Digital Painting'
+        },
+        {
+            id: 'artwork-003',
+            title: 'Dragon Warrior',
+            category: 'character-design',
+            thumbnail: 'assets/images/gallery/jpg/artwork-003.svg',
+            fullSize: 'assets/images/gallery/jpg/artwork-003.svg',
+            alt: 'Character design of dragon warrior',
+            year: 2024,
+            medium: 'Digital Painting'
+        },
+        {
+            id: 'artwork-004',
+            title: 'Enchanted Castle',
+            category: 'environment',
+            thumbnail: 'assets/images/gallery/jpg/artwork-001.svg',
+            fullSize: 'assets/images/gallery/jpg/artwork-001.svg',
+            alt: 'Magical enchanted castle environment',
+            year: 2023,
+            medium: 'Digital Painting'
+        },
+        {
+            id: 'artwork-005',
+            title: 'Steampunk Inventor',
+            category: 'character-design',
+            thumbnail: 'assets/images/gallery/jpg/artwork-003.svg',
+            fullSize: 'assets/images/gallery/jpg/artwork-003.svg',
+            alt: 'Steampunk inventor character design',
+            year: 2023,
+            medium: 'Digital Painting'
+        },
+        {
+            id: 'artwork-006',
+            title: 'Cosmic Nebula',
+            category: 'illustration',
+            thumbnail: 'assets/images/gallery/jpg/artwork-002.svg',
+            fullSize: 'assets/images/gallery/jpg/artwork-002.svg',
+            alt: 'Cosmic nebula space illustration',
+            year: 2023,
+            medium: 'Digital Painting'
+        }
+    ];
+    
+    let currentFilter = 'all';
+    let currentModalIndex = 0;
+    let filteredArtwork = [];
+    
+    // Simple Portfolio JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize gallery
+        initializeGallery();
+        
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('.navbar__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    
+                    // Update active nav link
+                    navLinks.forEach(nav => nav.classList.remove('navbar__link--active'));
+                    this.classList.add('navbar__link--active');
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.navbar__toggle');
+        const navbar = document.querySelector('.navbar');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                navbar.classList.toggle('navbar--mobile-open');
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+            });
+        }
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+        
+        // Gallery filters
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('filter-btn--active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                this.classList.add('filter-btn--active');
+                this.setAttribute('aria-selected', 'true');
+                
+                currentFilter = this.dataset.filter;
+                filterGallery(currentFilter);
+            });
+        });
+        
+        // Modal close functionality
+        const modal = document.getElementById('lightbox-modal');
+        const closeButtons = document.querySelectorAll('[data-modal-close]');
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', closeModal);
+        });
+        
+        // Modal navigation
+        document.getElementById('modal-prev').addEventListener('click', () => navigateModal(-1));
+        document.getElementById('modal-next').addEventListener('click', () => navigateModal(1));
+        
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', function(e) {
+            if (modal.style.display === 'flex') {
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') navigateModal(-1);
+                if (e.key === 'ArrowRight') navigateModal(1);
+            }
+        });
+        
+        // Contact form basic handling
+        const contactForm = document.querySelector('#contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const statusElement = document.querySelector('#form-status');
+                statusElement.className = 'form-status form-status--success';
+                statusElement.textContent = 'Thank you! Your message has been received. This is a demo - no actual email was sent.';
+                statusElement.style.display = 'block';
+            });
+        }
+    });
+    
+    function initializeGallery() {
+        filterGallery('all');
+    }
+    
+    function filterGallery(category) {
+        if (category === 'all') {
+            filteredArtwork = [...artworkData];
+        } else {
+            filteredArtwork = artworkData.filter(item => item.category === category);
+        }
+        
+        renderGallery();
+    }
+    
+    function renderGallery() {
+        const galleryGrid = document.getElementById('gallery-grid');
+        if (!galleryGrid) return;
+        
+        galleryGrid.innerHTML = '';
+        
+        filteredArtwork.forEach((artwork, index) => {
+            const artworkCard = createArtworkCard(artwork, index);
+            galleryGrid.appendChild(artworkCard);
+        });
+    }
+    
+    function createArtworkCard(artwork, index) {
+        const card = document.createElement('article');
+        card.className = 'artwork-card';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('data-artwork-id', artwork.id);
+        
+        card.innerHTML = `
+            <div class="image-container loading">
+                <img class="artwork-card__image loading" data-src="${artwork.thumbnail}" alt="${artwork.alt}" loading="lazy" />
+            </div>
+            <div class="artwork-card__overlay">
+                <h3 class="artwork-card__title">${artwork.title}</h3>
+                <p class="artwork-card__category">${formatCategory(artwork.category)}</p>
+            </div>
+        `;
+        
+        card.addEventListener('click', () => openModal(index));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(index);
+            }
+        });
+        
+        return card;
+    }
+    
+    function formatCategory(category) {
+        return category.split('-').map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' ');
+    }
+    
+    function openModal(index) {
+        currentModalIndex = index;
+        const artwork = filteredArtwork[index];
+        if (!artwork) return;
+        
+        const modal = document.getElementById('lightbox-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalTitle = document.getElementById('modal-title');
+        const modalCategory = document.getElementById('modal-category');
+        const modalYear = document.getElementById('modal-year');
+        const modalMedium = document.getElementById('modal-medium');
+        
+        modalImage.src = artwork.fullSize;
+        modalImage.alt = artwork.alt;
+        modalTitle.textContent = artwork.title;
+        modalCategory.textContent = formatCategory(artwork.category);
+        modalYear.textContent = artwork.year;
+        modalMedium.textContent = artwork.medium;
+        
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+        
+        updateModalNavigation();
+        
+        // Focus modal for accessibility
+        setTimeout(() => modal.focus(), 100);
+    }
+    
+    function closeModal() {
+        const modal = document.getElementById('lightbox-modal');
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+    }
+    
+    function navigateModal(direction) {
+        const newIndex = currentModalIndex + direction;
+        if (newIndex >= 0 && newIndex < filteredArtwork.length) {
+            openModal(newIndex);
+        }
+    }
+    
+    function updateModalNavigation() {
+        const prevBtn = document.getElementById('modal-prev');
+        const nextBtn = document.getElementById('modal-next');
+        
+        prevBtn.style.display = currentModalIndex > 0 ? 'flex' : 'none';
+        nextBtn.style.display = currentModalIndex < filteredArtwork.length - 1 ? 'flex' : 'none';
+    }
+    </script>
+</body>
+</html>

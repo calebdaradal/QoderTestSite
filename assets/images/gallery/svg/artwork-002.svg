@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Cyberpunk Cityscape -->
+  <defs>
+    <linearGradient id="cityBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0B2E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F3460;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF00FF;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#FF00FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF00FF;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#cityBg)"/>
+  
+  <!-- City buildings -->
+  <g opacity="0.9">
+    <!-- Building 1 -->
+    <rect x="50" y="150" width="40" height="120" fill="#1E293B"/>
+    <rect x="55" y="155" width="6" height="8" fill="#06B6D4"/>
+    <rect x="65" y="165" width="6" height="8" fill="#06B6D4"/>
+    <rect x="75" y="175" width="6" height="8" fill="#06B6D4"/>
+    
+    <!-- Building 2 (tallest) -->
+    <rect x="150" y="80" width="50" height="190" fill="#334155"/>
+    <rect x="155" y="90" width="8" height="10" fill="#00D9FF"/>
+    <rect x="170" y="100" width="8" height="10" fill="#00D9FF"/>
+    <rect x="185" y="110" width="8" height="10" fill="#00D9FF"/>
+    <rect x="155" y="130" width="8" height="10" fill="#00D9FF"/>
+    
+    <!-- Building 3 -->
+    <rect x="250" y="120" width="35" height="150" fill="#1E293B"/>
+    <rect x="255" y="130" width="5" height="6" fill="#FF00FF"/>
+    <rect x="265" y="140" width="5" height="6" fill="#FF00FF"/>
+    <rect x="275" y="150" width="5" height="6" fill="#FF00FF"/>
+    
+    <!-- Building 4 -->
+    <rect x="320" y="100" width="45" height="170" fill="#2D3748"/>
+    <rect x="325" y="110" width="7" height="9" fill="#06B6D4"/>
+    <rect x="340" y="120" width="7" height="9" fill="#06B6D4"/>
+    <rect x="355" y="130" width="7" height="9" fill="#06B6D4"/>
+  </g>
+  
+  <!-- Flying vehicles -->
+  <g opacity="0.8">
+    <ellipse cx="120" cy="60" rx="8" ry="3" fill="#00D9FF">
+      <animate attributeName="cx" values="120;280;120" dur="8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="300" cy="90" rx="6" ry="2" fill="#FF00FF">
+      <animate attributeName="cx" values="300;100;300" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Neon signs -->
+  <rect x="100" y="180" width="80" height="4" fill="url(#neon)" opacity="0.8"/>
+  <rect x="220" y="200" width="60" height="3" fill="#00D9FF" opacity="0.8"/>
+</svg>
