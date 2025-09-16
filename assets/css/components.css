@@ -868,7 +868,7 @@
 
 .footer {
   padding: var(--spacing-3xl) 0;
-  background: var(--color-primary);
+  background: #1a1a1a;
   color: var(--color-white);
   text-align: center;
 }
